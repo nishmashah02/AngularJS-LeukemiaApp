@@ -1,0 +1,53 @@
+<div class="wrapper">
+
+<!-- Sidebar -->
+<nav ng-show="state" id="sidebar">
+  <div class="sidebar-header">
+      <h3>Leukemia</h3>
+  </div>
+
+  <ul class="list-unstyled components">
+      <li class="active">
+          <a href="newClick()">Leukemia News</a>
+      </li>
+      <li>
+          <a ng-click="addMedicineReminder()">Medicine Reminder</a>
+      </li>
+      <li>
+          <a ng-click="onDonationTap()">Donations</a>
+      </li>
+      <li>
+          <a ng-click="logout()">Logout</a>
+      </li>
+  </ul>
+</nav>
+
+<div id="content">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
+      <button type="button" ng-click="toggle()" id="sidebarCollapse" class="btn btn-info">
+          <i class="fa fa-bars"></i>
+      </button>
+
+  </div>
+</nav>
+
+
+</div>
+
+</div>
+
+
+<div>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="item_name" value="Leukemia Donations">
+<input type="hidden" name="item_number" value="Leukemia resarch foundation">
+
+<div style="display:none">
+<input type="image" name="submit" id="submitClick" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" atl="Donate">
+<img lt="" width="1" height="1" src="">
+</div>
+</form>
+</div>
